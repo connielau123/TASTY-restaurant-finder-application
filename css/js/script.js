@@ -1,3 +1,4 @@
+
 // Initialize and add the map
 function initMap() {
     // The location of Uluru
@@ -14,4 +15,4 @@ function initMap() {
     });
   }
   
-  window.initMap = initMap;
+window.initMap = initMap;
