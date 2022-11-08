@@ -9,39 +9,41 @@
   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
   <link rel="stylesheet" type="text/css" href="./css/style.css" />
   <script type="module" src="./css/js/script.js"></script>
+ ＜new-branch＞
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
-    <header>
-        <h1> Find Your Local Restaurants </h1>
-        <p id="header">
-          Do you want to find the local restaurants quickly? You will find the best restaurants here. 
-        </p>
-    
-    </header>
 
     <main>
-        <nav>
+        <nav id="nav">
         <!-- NAVIGATION MENUS -->
-       <div>
-        <li><a href="">Home</a></li>
-        <li>
-          <a href="">News and Info</a>
-          <!-- DROPDOWN MENU -->
-          <ul>
-            <li><a href="">Dropdown 1 </a></li>
-            <li><a href="">Dropdown 2</a></li>
-            <li><a href="">Dropdown 2</a></li>
-            <li><a href="">Dropdown 3</a></li>
-            <li><a href="">Dropdown 4</a></li>
-          </ul>
-        </li>
-        <li><a href="">Contact Us</a></li>
-      </nav>
+        <div class="logo">
+        <img src="./css/js/logo.jpg" alt="logo" class="center">
+      </div> 
     </div>
+          <!-- DROPDOWN MENU -->
+          <ul class="nav-links">
+            <li class="nav-links"><a class="nav-link" href="index.html" id="active">Home</a></li>
+            <li class="nav-links"><a class="nav-link" href="#">Services</a></li>
+            <li class="nav-links"><a class="nav-link" href="#">About</a></li>
+            <li class="nav-links"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+      </nav>
+    
+      <header>
+        <h1 id="header"> Find Your Local Restaurants </h1>
+        <h4 id="header">
+          Do you want to find the local restaurants quickly? You will find the best restaurants here. 
+        </h4>
+  
+    </header>
 
     <div>
-      <h2>Search events online</h2>
+      <h2>Search restaurants online</h2>
       <input type="text" placeholder="Search..">
       <ul>
         <li><a href="#">Birmingham</a></li>
@@ -64,12 +66,11 @@
     <div id="map"></div>
     </main>
 
-
     <script src="./css/js/script.js"></script>
     <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0nJJfZpuc-V6I06F2B-HNyzVFfe3-FH8&callback=initMap&v=weekly"
     defer
-  ></script>
+    </script>
 </body>
 
 </html>
