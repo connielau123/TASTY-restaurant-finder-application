@@ -1,8 +1,8 @@
 
 // Initialize and add the map
 function initMap() {
-    // The location of Uluru
-    const uluru = { lat: -25.344, lng: 131.031 };
+    // The location of West Midlands
+    const westMidlands = { lat: 52.4751, lng: -1.8298 };
 
     // Map styles - turn off Points of Interest
     var mapStyles =[
@@ -15,16 +15,16 @@ function initMap() {
         }
     ];
 
-    // The map, centered at Uluru
+    // The map, centered over the West Midlands
     const map = new google.maps.Map(document.getElementById("map"), {
       zoom: 14,
-      center: uluru,
+      center: westMidlands,
       styles: mapStyles
     });
 
-    // The marker, positioned at Uluru
+    // The marker, positioned at the center of the West Midlands
     const marker = new google.maps.Marker({
-      position: uluru,
+      position: westMidlands,
       map: map,
     });
 
