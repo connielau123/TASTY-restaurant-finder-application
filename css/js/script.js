@@ -17,7 +17,7 @@ function initMap() {
 
     // The map, centered over the West Midlands
     const map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 14,
+      zoom: 9,
       center: westMidlands,
       styles: mapStyles
     });
@@ -49,6 +49,7 @@ function initMap() {
         service.findPlaceFromQuery(request, function(results, status) {
             if (status === google.maps.places.PlacesServiceStatus.OK) {
               map.setCenter(results[0].geometry.location);
+              map.setZoom(14);
             }
         });
     }
