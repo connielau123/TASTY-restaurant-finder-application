@@ -64,24 +64,27 @@ function initMap() {
         service.nearbySearch(request, function(results, status) {
             if (status === google.maps.places.PlacesServiceStatus.OK) {
                 for (var i=0; i<results.length; i++) {
-                    console.log(results[i]);
+                    var result = results[i];
+                    console.log(result);
 
-                    const infoWindow = new google.maps.InfoWindow({
-                        content: results[i].name,
-                    });
-
-                    const marker = new google.maps.Marker({
-                        position: results[i].geometry.location,
-                        map: map,
-                        title: results[i].name
-                    });
-
-                    marker.addListener('click', function() {
-                        infoWindow.open({
-                          anchor: marker,
-                          map,
+                    if (results[i].rating >= 4) {
+                        const infoWindow = new google.maps.InfoWindow({
+                            content: result.name + " - " + result.rating,
                         });
-                    });
+
+                        const marker = new google.maps.Marker({
+                            position: result.geometry.location,
+                            map: map,
+                            title: result.name
+                        });
+
+                        marker.addListener('click', function() {
+                            infoWindow.open({
+                              anchor: marker,
+                              map,
+                            });
+                        });
+                    }
                 }
             }
         });
