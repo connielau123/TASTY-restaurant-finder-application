@@ -32,9 +32,24 @@ function initMap() {
 
     const searchTextElement = document.getElementById('search-text');
     const searchFormElement = document.getElementById('search-form');
+    const myRestaurantsElement = document.getElementById('my-restaurants')
 
     // Create an info window to show information in after clicking a marker
     const infoWindow = new google.maps.InfoWindow();
+
+    function showMyRestaurants() {
+        myRestaurantsElement.innerHTML = "<h3>My Restaurants</h3>";
+
+        for (let i = 0; i < localStorage.length; i++) {
+            const key = localStorage.key(i);
+            if (key.startsWith("my-restaurants-")) {
+                const restaurant = JSON.parse(localStorage.getItem(key));
+                const restaurantElement = document.createElement('div');
+                restaurantElement.innerHTML = restaurant.name;
+                myRestaurantsElement.appendChild(restaurantElement);
+            }
+          }
+    }
 
     function searchHandler(event) {
         event.preventDefault();
@@ -68,7 +83,7 @@ function initMap() {
             if (status === google.maps.places.PlacesServiceStatus.OK) {
                 for (var i=0; i<results.length; i++) {
                     let result = results[i];
-                    console.log(result);
+                    // console.log(result);
 
                     if (results[i].rating >= 4) {
                         const marker = new google.maps.Marker({
@@ -78,8 +93,35 @@ function initMap() {
                         });
 
                         marker.addListener('click', function() {
-                            const content = result.name + " - " + result.rating;
-                            infoWindow.setContent(content);
+                            const contentElement = document.createElement('div');
+                            contentElement.innerHTML = `
+                                <h4>${result.name}</h4>
+                                <p>
+                                  <strong>Rating:</strong> ${result.rating}
+                                </p>
+                                <button class="save-restaurant">Add to My Restaurants</button>
+                            `;
+
+                            const saveRestaurantElement = contentElement.querySelector('.save-restaurant');
+
+                            saveRestaurantElement.addEventListener('click', function(event) {
+                                console.log('Save restaurant button clicked');
+
+                                // Save restaurant to local storage
+                                const key = `my-restaurants-${result.place_id}`;
+
+                                console.log('Looking in local storage for ', key);
+                                const existingItem = window.localStorage.getItem(key);
+                                console.log('Existing item', existingItem);
+
+                                if (!existingItem) {
+                                    window.localStorage.setItem(key, JSON.stringify(result));
+                                    showMyRestaurants();
+                                }
+                            });
+
+                            //const content = result.name + " - " + result.rating;
+                            infoWindow.setContent(contentElement);
                             infoWindow.open({
                               anchor: marker,
                               map,
@@ -94,6 +136,8 @@ function initMap() {
     map.addListener('center_changed', centerChangedHandler);
 
     searchFormElement.addEventListener('submit', searchHandler);
+
+    showMyRestaurants();
 }
 
 window.initMap = initMap;
