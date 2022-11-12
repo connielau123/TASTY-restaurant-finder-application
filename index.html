@@ -4,73 +4,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> Find Your Local Restaurants </title>
-  <link rel="stylesheet" href="./css/style.css" />
+  <title> TASTY 4+ STAR RESTRAURANTS </title>
+  <link rel="stylesheet" href="assets/css/style.css" />
   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
   <link rel="stylesheet" type="text/css" href="./css/style.css" />
- ＜new-branch＞
+  <script type="module" src="assets/css/style.css"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
+<header>
+   <img src="assets/images/logo.jpg">
+  <nav>
+   <ul class="nav-links">
+      <li class="nav-links"><a class="nav-link" href="index.html" id="active">HOME</a></li>
+      <li class="nav-links"><a class="nav-link" href="#">ABOUT</a></li>
+    </ul>
+  </nav>
+  <div id="bannerimage"></div>
+</header>
 
-    <main>
-        <nav id="nav">
-        <!-- NAVIGATION MENUS -->
-        <div class="logo">
-        <img src="./css/js/logo.jpg" alt="logo" class="center">
-      </div> 
-    </div>
-          <!-- DROPDOWN MENU -->
-          <ul class="nav-links">
-            <li class="nav-links"><a class="nav-link" href="index.html" id="active">Home</a></li>
-            <li class="nav-links"><a class="nav-link" href="#">Services</a></li>
-            <li class="nav-links"><a class="nav-link" href="#">About</a></li>
-            <li class="nav-links"><a class="nav-link" href="#">Contact</a></li>
-        </ul>
-      </nav>
-    
-      <header>
-        <h1 id="header"> Find Your Local Restaurants </h1>
-        <h4 id="header">
-          Do you want to find the local restaurants quickly? You will find the best restaurants here. 
-        </h4>
-  
-    </header>
-
-    <div>
-      <h2>Search restaurants online</h2>
+<main>
+  <div class="column">
+      <h2>RESTAURANT FINDER</h2>
       <form id="search-form">
         <input id="search-text" type="text" placeholder="Search for a town, city or postcode">
-        <button>Search</button>
+        <button class="searchbtn">Search</button>
       </form>
-      <ul>
-        <li><a href="#">Birmingham</a></li>
-        <li><a href="#">London</a></li>
-      
-        <li><a href="#">Nottingham</a></li>
-        <li><a href="#">Sheffield</a></li>
-      
-        <li><a href="#">Manchester</a></li>
-        <li><a href="#">Liverpool</a></li>
-        <li><a href="#">Leister</a></li>
-      </ul>
-    </div>
+      <button class="btn" id="birmingham"><a href="#">BIRMINGHAM</a></button>
+      <button class="btn" id="london"><a href="#">LONDON</a></button>
+      <button class="btn" id="nottingham"><a href="#">NOTTINGHAM</a></button>
+      <button class="btn" id="sheffield"><a href="#">SHEFFIELD</a></button>
+      <button class="btn" id="manchester"><a href="#">MANCHESTER</a></button>
+      <button class="btn" id="liverpool"><a href="#">LIVERPOOL</a></button>
+      <button class="btn" id="leicester"><a href="#">LEICESTER</a></button>
+   </div>
 
-    <div>
-      <h2>Search results</h2>
-  
-    </div>
-    <h3>My Google Maps Demo</h3>
+    <div class="mapbox">
     <div id="map"></div>
-    <div id="my-restaurants"></div>
-    </main>
+    </div>
 
-    <script src="./css/js/script.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0nJJfZpuc-V6I06F2B-HNyzVFfe3-FH8&callback=initMap&libraries=places&v=weekly" defer></script>
+  <section class="searchbox">
+    <h3>MY RESTAURANTS</h3>
+      <div id=my-restaurants class="results"></div>
+   </section>
+</main>
+
+<footer id="row">
+  <ul id="socials">
+    <li>Social media:</li>
+    <li>Instagram:Tasty</li>
+    <li>Facebook:Tasty</li>
+    <li>Twitter:Tasty</li>
+  </ul>
+
+  <ul id="Creators">
+    <li>Creators:</li>
+    <li>Adiba</li>
+    <li>Maartje</li>
+    <li>Connie</li>
+    <li>Mohammed</li>
+      <p>Placing you at the heart of good food wherever you are</p>
+  </ul>
+
+  <ul id="contacts">
+    <li>contact us:</li>
+    <li>Email: Tasty@gmail.com</li>
+    <li>Number: 0800 758 3333</li>
+  </ul>
+</footer>
 </body>
 
-</html>
+<script src="./css/js/script.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0nJJfZpuc-V6I06F2B-HNyzVFfe3-FH8&callback=initMap&libraries=places&v=weekly" defer></script>

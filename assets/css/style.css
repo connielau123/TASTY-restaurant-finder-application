@@ -1,0 +1,218 @@
+
+::selection {
+    background-color:#d9b594;
+    color: var(--outer-space);
+  }  
+  
+  html {
+    font-size: 62.5%;
+  }
+  
+  body {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.75rem;
+    line-height: 1.5;
+    color: var(--gin);
+    background-color: var(--outer-space);
+  }
+  
+h1 {
+  margin-bottom: 0.625rem;
+  color: #F1A661; 
+  font-weight: 700;
+  line-height: 1.1;
+  font-size: 50px;
+}
+
+h2 {
+  margin-top: 0%;
+}
+
+
+header {
+  display: flex;
+  background-color: white;
+
+  
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  left: 80%;
+  margin-right: -320%;
+}
+
+ul {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.nav-links {
+  display: inline-block;
+  position: relative;
+  background-color: #ffffff;
+  color: #282828;
+  min-width: 160px;
+  text-align: center;
+}
+
+#map {
+  width: 100%;
+}
+
+.mapbox{
+display: flex;
+width: 40%;
+margin-left:30px;
+
+}
+
+nav {
+  display: flex;
+  padding-top: 80px;
+  margin-left: 500px;
+  height:30px;
+}
+
+main{
+  display: flex;
+  margin-top: 20px;
+}
+
+.searchbox{
+  display: flex;
+  margin-left: 20px;
+  border-style: solid;
+  width: 50%;
+  color: #ffffff;
+  background-color: #F1A661;
+  font-weight:bolder;
+  border-color: #d68246;
+  justify-content:0;
+  flex-direction: column;
+  text-align: center;
+  flex-wrap: nowrap;
+  
+}
+
+a{
+  color: #282828;
+  font-weight: bold;
+}
+
+a:link { text-decoration: none; 
+  }
+
+
+a:visited { text-decoration: none;
+  }
+
+
+a:hover { text-decoration: none;
+}
+
+
+a:active { text-decoration: none; 
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+  margin-top: 0px;
+}
+
+#btn{
+  font-weight:bolder;
+  margin-bottom: 14.5px;
+  color: #ffffff;
+  background-color: #F1A661;
+  border-style: none;
+  border-color: bisque;
+  height: 30px;
+
+}
+
+.searchbtn{
+  margin-top: 10px;
+  font-weight:bolder;
+  margin-bottom: 20px;
+  color: #ffffff;
+  background-color: #000000;
+  border-style: none;
+  border-color: bisque;
+  height: 30px;
+}
+
+.results{
+  display: flex;
+  background-color: white;
+  color: #282828;
+  border-style: solid;
+  border-color: #282828;
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 2px;
+
+}
+
+#bannerimage {
+  width: 100%;
+  background-image: url(https://toohotel.com/wp-content/uploads/2022/09/TOO_restaurant_Panoramique_vue_Paris_Seine_Tour_Eiffel_2.jpg);
+  height: 450px;
+  background-position: center;
+}
+
+#centre{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 50%;
+  margin-top: 100px;
+
+}
+ 
+
+
+#row{
+  display: flex;
+  display: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  color: #000000;
+  font-size: small;
+  
+}
+
+#socials{
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+
+}
+
+#Creators{
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  align-items: center;
+}
+
+#contacts{
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  
+}
+
+footer{
+  margin-top: 20px;
+  font-weight: lighter;
+}
+
