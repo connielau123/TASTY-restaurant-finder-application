@@ -127,7 +127,7 @@ a:active { text-decoration: none;
   margin-top: 0px;
 }
 
-#btn{
+.location-btn{
   font-weight:bolder;
   margin-bottom: 14.5px;
   color: #ffffff;

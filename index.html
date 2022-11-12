@@ -7,8 +7,6 @@
   <title> TASTY 4+ STAR RESTRAURANTS </title>
   <link rel="stylesheet" href="assets/css/style.css" />
   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-  <link rel="stylesheet" type="text/css" href="./css/style.css" />
-  <script type="module" src="assets/css/style.css"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
@@ -22,8 +20,9 @@
       <li class="nav-links"><a class="nav-link" href="#">ABOUT</a></li>
     </ul>
   </nav>
-  <div id="bannerimage"></div>
 </header>
+
+<div id="bannerimage"></div>
 
 <main>
   <div class="column">
@@ -32,13 +31,13 @@
         <input id="search-text" type="text" placeholder="Search for a town, city or postcode">
         <button class="searchbtn">Search</button>
       </form>
-      <button class="btn" id="birmingham"><a href="#">BIRMINGHAM</a></button>
-      <button class="btn" id="london"><a href="#">LONDON</a></button>
-      <button class="btn" id="nottingham"><a href="#">NOTTINGHAM</a></button>
-      <button class="btn" id="sheffield"><a href="#">SHEFFIELD</a></button>
-      <button class="btn" id="manchester"><a href="#">MANCHESTER</a></button>
-      <button class="btn" id="liverpool"><a href="#">LIVERPOOL</a></button>
-      <button class="btn" id="leicester"><a href="#">LEICESTER</a></button>
+      <button class="location-btn" id="birmingham">BIRMINGHAM</button>
+      <button class="location-btn" id="london">LONDON</button>
+      <button class="location-btn" id="nottingham">NOTTINGHAM</button>
+      <button class="location-btn" id="sheffield">SHEFFIELD</button>
+      <button class="location-btn" id="manchester">MANCHESTER</button>
+      <button class="location-btn" id="liverpool">LIVERPOOL</button>
+      <button class="location-btn" id="leicester">LEICESTER</button>
    </div>
 
     <div class="mapbox">
@@ -76,5 +75,5 @@
 </footer>
 </body>
 
-<script src="./css/js/script.js"></script>
+<script src="assets/js/script.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0nJJfZpuc-V6I06F2B-HNyzVFfe3-FH8&callback=initMap&libraries=places&v=weekly" defer></script>

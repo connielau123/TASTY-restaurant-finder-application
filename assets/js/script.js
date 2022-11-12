@@ -1,11 +1,22 @@
-
 // Initialize and add the map
 function initMap() {
+    // Predefined Locations
+    const locations = {
+        westMidlands: { lat: 52.4751, lng: -1.8298 },
+        london: { lat: 51.507359, lng: -0.136439},
+        birmingham: { lat: 52.489471, lng: -1.898575},
+        nottingham: { lat: 52.950001, lng: -1.150000},
+        sheffield: { lat: 53.383331, lng: -1.466667},
+        manchester: { lat: 53.478062, lng: -2.244644},
+        liverpool: { lat: 53.400002, lng: -2.983333},
+        leicester: { lat: 52.6333310, lng: -1.133333},
+    }
+
     // The location of West Midlands
-    const westMidlands = { lat: 52.4751, lng: -1.8298 };
+    const westMidlands = locations.westMidlands;
 
     // Map styles - turn off Points of Interest
-    var mapStyles =[
+    var mapStyles = [
         {
             featureType: "poi",
             elementType: "labels",
@@ -22,17 +33,12 @@ function initMap() {
       styles: mapStyles
     });
 
-    // The marker, positioned at the center of the West Midlands
-    const marker = new google.maps.Marker({
-      position: westMidlands,
-      map: map,
-    });
-
     const service = new google.maps.places.PlacesService(map);
 
     const searchTextElement = document.getElementById('search-text');
     const searchFormElement = document.getElementById('search-form');
-    const myRestaurantsElement = document.getElementById('my-restaurants')
+    const myRestaurantsElement = document.getElementById('my-restaurants');
+    const locationButtonElements = document.querySelectorAll('.location-btn');
 
     // Create an info window to show information in after clicking a marker
     const infoWindow = new google.maps.InfoWindow();
@@ -67,7 +73,7 @@ function initMap() {
         service.findPlaceFromQuery(request, function(results, status) {
             if (status === google.maps.places.PlacesServiceStatus.OK) {
               map.setCenter(results[0].geometry.location);
-              map.setZoom(14);
+              map.setZoom(13);
             }
         });
     }
@@ -138,6 +144,16 @@ function initMap() {
     searchFormElement.addEventListener('submit', searchHandler);
 
     showMyRestaurants();
+
+    for (var i=0; i<locationButtonElements.length; i++) {
+        let locationButtonElement = locationButtonElements[i];
+        locationButtonElement.addEventListener('click', function(event) {
+            const locationId = event.target.getAttribute("id");
+            const location = locations[locationId];
+            map.setCenter(location);
+            map.setZoom(13);
+        });
+    }
 }
 
 window.initMap = initMap;
