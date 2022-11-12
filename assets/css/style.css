@@ -32,6 +32,7 @@ h2 {
 header {
   display: flex;
   background-color: white;
+  justify-content: space-between;
 
   
 }
@@ -164,6 +165,7 @@ a:active { text-decoration: none;
   margin-left: 10px;
   margin-right: 10px;
   border-radius: 5px;
+  flex-direction: column;
 
 }
 
@@ -221,3 +223,6 @@ footer{
   font-weight: lighter;
 }
 
+#textinput{
+  height: 25px;
+}

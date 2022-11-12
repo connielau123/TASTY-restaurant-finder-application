@@ -44,7 +44,6 @@ function initMap() {
     const infoWindow = new google.maps.InfoWindow();
 
     function showMyRestaurants() {
-        myRestaurantsElement.innerHTML = "<h3>My Restaurants</h3>";
 
         for (let i = 0; i < localStorage.length; i++) {
             const key = localStorage.key(i);
