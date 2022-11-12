@@ -64,12 +64,14 @@ ul {
 
 #map {
   width: 100%;
+  border-radius: 5px;
 }
 
 .mapbox{
 display: flex;
 width: 40%;
 margin-left:30px;
+border-radius: 5px;
 
 }
 
@@ -98,6 +100,7 @@ main{
   flex-direction: column;
   text-align: center;
   flex-wrap: nowrap;
+  border-radius: 5PX;
   
 }
 
@@ -135,6 +138,7 @@ a:active { text-decoration: none;
   border-style: none;
   border-color: bisque;
   height: 30px;
+  border-radius: 5px;
 
 }
 
@@ -147,6 +151,7 @@ a:active { text-decoration: none;
   border-style: none;
   border-color: bisque;
   height: 30px;
+  border-radius: 5px;
 }
 
 .results{
@@ -158,7 +163,7 @@ a:active { text-decoration: none;
   padding: 10px;
   margin-left: 10px;
   margin-right: 10px;
-  border-radius: 2px;
+  border-radius: 5px;
 
 }
 
