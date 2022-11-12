@@ -4,11 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> TASTY 5 STAR RESTRAURANTS </title>
+  <title> TASTY 4+ STAR RESTRAURANTS </title>
   <link rel="stylesheet" href="assets/css/style.css" />
   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-  <link rel="stylesheet" type="text/css" href="./css/style.css" />
-  <script type="module" src="assets/css/style.css"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
@@ -16,7 +14,6 @@
 <body>
 <header>
    <img src="assets/images/logo.jpg">
-  
   <nav>
    <ul class="nav-links">
       <li class="nav-links"><a class="nav-link" href="index.html" id="active">HOME</a></li>
@@ -26,20 +23,22 @@
   </nav>
 </header>
 
-  <div id="bannerimage"></div>
+<div id="bannerimage"></div>
 
 <main>
   <div class="column">
       <h2>RESTAURANT FINDER</h2>
-      <input type="text" placeholder="Search...">
-      <button class="searchbtn">SEARCH</button>
-      <button id="btn"><a href="#">BIRMINGHAM</a></button>
-      <button id="btn"><a href="#">LONDON</a></button>
-      <button id="btn"><a href="#">NOTTINGHAM</a></button>
-      <button id="btn"><a href="#">SHEFFIELD</a></button>
-      <button id="btn"><a href="#">MANCHESTER</a></button>
-      <button id="btn"><a href="#">LIVERPOOL</a></button>
-      <button id="btn"><a href="#">LEICESTER</a></button>
+      <form id="search-form">
+        <input id="search-text" type="text" placeholder="Search for a town, city or postcode">
+        <button class="searchbtn">Search</button>
+      </form>
+      <button class="location-btn" id="birmingham">BIRMINGHAM</button>
+      <button class="location-btn" id="london">LONDON</button>
+      <button class="location-btn" id="nottingham">NOTTINGHAM</button>
+      <button class="location-btn" id="sheffield">SHEFFIELD</button>
+      <button class="location-btn" id="manchester">MANCHESTER</button>
+      <button class="location-btn" id="liverpool">LIVERPOOL</button>
+      <button class="location-btn" id="leicester">LEICESTER</button>
    </div>
 
     <div class="mapbox">
@@ -47,42 +46,35 @@
     </div>
 
   <section class="searchbox">
-    <h3>BEST RATED RESTAURANTS</h3>
-
-   <section class="results">
-        5 STAR RESTAURANT 
+    <h3>MY RESTAURANTS</h3>
+      <div id=my-restaurants class="results"></div>
    </section>
-  </section>
-  
-
-
 </main>
 
 <footer id="row">
-<ul id="socials">
+  <ul id="socials">
     <li>Social media:</li>
     <li>Instagram:Tasty</li>
     <li>Facebook:Tasty</li>
     <li>Twitter:Tasty</li>
-</ul>
+  </ul>
 
-<ul id="Creators">
-  <li>Creators:</li>
-  <li>Adiba</li>
-  <li>Maartje</li>
-  <li>Connie</li>
-  <li>Mohammed</li>
-  <p>Placing you at the heart of good food wherever you are</p>
-</ul>
+  <ul id="Creators">
+    <li>Creators:</li>
+    <li>Adiba</li>
+    <li>Maartje</li>
+    <li>Connie</li>
+    <li>Mohammed</li>
+      <p>Placing you at the heart of good food wherever you are</p>
+  </ul>
 
-<ul id="contacts">
+  <ul id="contacts">
     <li>contact us:</li>
     <li>Email: Tasty@gmail.com</li>
     <li>Number: 0800 758 3333</li>
-</ul>
+  </ul>
 </footer>
 </body>
 
-    <script src="./assets/js/script.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0nJJfZpuc-V6I06F2B-HNyzVFfe3-FH8&callback=initMap&v=weekly" defer></script>
-  
+<script src="assets/js/script.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0nJJfZpuc-V6I06F2B-HNyzVFfe3-FH8&callback=initMap&libraries=places&v=weekly" defer></script>
