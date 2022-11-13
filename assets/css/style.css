@@ -240,3 +240,19 @@ footer{
 #textinput{
   height: 25px;
 }
+
+@media only screen and (max-width: 600px) {
+  main {
+    flex-direction: column;
+  }
+  #contacts {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+
+
+
+
