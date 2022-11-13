@@ -104,24 +104,38 @@ main{
   
 }
 
-a{
-  color: #282828;
-  font-weight: bold;
+a {
+  color: #020202;
+  position: relative;
+  text-decoration: none;
+  transition: color .4s ease-out;
 }
 
-a:link { text-decoration: none; 
-  }
-
-
-a:visited { text-decoration: none;
-  }
-
-
-a:hover { text-decoration: none;
+a:hover {
+  color: #09090a;
+  right: 0;
+  text-decoration: none;
 }
 
+a:hover:after {
+  border-color:  #F1A661;
+  right: 0;
+}
 
-a:active { text-decoration: none; 
+a:after {
+  border-radius: 1em;
+  border-top: .1em solid  #F1A661;
+  content: "";
+  position: absolute;
+    right: 100%;
+    bottom: .14em;
+    left: 0;
+  transition: right .4s cubic-bezier(0,.5,0,1);
+  border-color: .4s ease-out;
+}
+
+a:hover:after {
+right: 0;
 }
 
 .column{
