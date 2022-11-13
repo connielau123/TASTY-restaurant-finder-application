@@ -24,6 +24,9 @@ Then I am presented with the restaurant details and can be added to my saved res
 When I save a restaurant 
 Then I can find it in my saved list
 
+URL of the deployed application
+https://connielau123.github.io/TASTY-restaurant-finder-application/
+
 The following image shows the web application's appearance and functionality:
 
 Desktop 
