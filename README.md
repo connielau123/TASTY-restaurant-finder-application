@@ -1,4 +1,4 @@
-# web-application-project-1
+# TASTY-restaurant-finder-application
 
 Interactive Front-End Application: Tasty 
 
